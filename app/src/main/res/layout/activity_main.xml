@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey_blue"
+    tools:context=".MainActivity">
+
+            <RelativeLayout
+                android:id="@+id/layoutLogo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/itdocx_logo"
+                    android:id="@+id/mainLogo"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+
+                android:layout_below="@+id/layoutLogo"
+                android:id="@+id/layout_Options"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_options"
+                android:elevation="8dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Story Saver"
+                    android:padding="5dp"
+                    android:textSize="26sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/green_50"
+                    android:textStyle="bold"
+                    android:id="@+id/mainHeadertxt"
+                    />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/layoutAfterScroll">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:elevation="8dp"
+                    android:id="@+id/layoutWhatsapp"
+                    android:layout_marginHorizontal="7dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/whatsapp_logo"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="10dp"
+                        android:id="@+id/logoWhatsapp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/logoWhatsapp"
+                        android:text="Whatsapp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/txtWhatsapp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtWhatsapp"
+                        android:text="Download Whatsapp Statuses"
+                        android:layout_toEndOf="@id/logoWhatsapp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_whatsappDownloader"
+                        android:padding="10dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_below="@id/layoutWhatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:elevation="8dp"
+                    android:id="@+id/layoutFacebook"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_facebook"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="5dp"
+                        android:id="@+id/logoFacebook" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/logoFacebook"
+                        android:text="Facebook"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/txtFacebook"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtFacebook"
+                        android:text="Download Facebook Statuses"
+                        android:layout_toEndOf="@id/logoFacebook"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_FacebookDld"
+                        android:padding="10dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_below="@id/layoutFacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:elevation="8dp"
+                    android:id="@+id/layoutInstagram"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="7dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/insta_logo"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="10dp"
+                        android:id="@+id/logoInstagram" />
+
+                    <TextView
+                        android:id="@+id/txtInsta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/logoInstagram"
+                        android:text="Instagram"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtInsta"
+                        android:text="Download videos from Instagram"
+                        android:layout_toEndOf="@id/logoInstagram"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_Instagramlstnr"
+                        android:padding="10dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_below="@+id/layoutInstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:elevation="8dp"
+                    android:id="@+id/layoutAboutUs"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="7dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_about"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="10dp"
+                        android:id="@+id/logoAboutUs" />
+
+                    <TextView
+                        android:id="@+id/txtAboutUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/logoAboutUs"
+                        android:text="About US"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtAboutUs"
+                        android:text="Know more about App"
+                        android:layout_toEndOf="@id/logoAboutUs"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_Aboutuslstnr"
+                        android:padding="10dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_below="@+id/layoutAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:elevation="8dp"
+                    android:id="@+id/layoutRateUs"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="7dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_rate"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="10dp"
+                        android:id="@+id/logoRateUs" />
+
+                    <TextView
+                        android:id="@+id/txtRateus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/logoRateUs"
+                        android:text="Rate US"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtRateus"
+                        android:text="Let us Know if you like this app"
+                        android:layout_toEndOf="@id/logoRateUs"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_Rateuslstnr"
+                        android:padding="10dp"
+                        />
+                </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+</layout>
