@@ -27,7 +27,7 @@ public class WhatsappAdapter extends RecyclerView.Adapter<WhatsappAdapter.ViewHo
     private ArrayList<WhatsappStatusModel> whatsappArraylist;
     private Context context;
     private LayoutInflater layoutInflater;
-    private String filepath = Util.rootDirectoryWhatsapp+"/";
+    private String filepath = Util.rootDirectoryWhatsapp+"";
 
     public WhatsappAdapter(ArrayList<WhatsappStatusModel> whatsappArraylist, Context context) {
         this.whatsappArraylist = whatsappArraylist;

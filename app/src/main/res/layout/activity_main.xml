@@ -18,7 +18,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/itdocx_logo"
+                    android:src="@drawable/it_docx_logo"
                     android:id="@+id/mainLogo"
                     android:layout_centerInParent="true"/>
 
@@ -119,16 +119,17 @@
                         android:layout_marginStart="10dp"
                         android:padding="5dp"
                         android:id="@+id/logoFacebook" />
+
                     <TextView
+                        android:id="@+id/txtFacebook"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/logoFacebook"
                         android:text="Facebook"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="10dp"
-                        android:id="@+id/txtFacebook"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"

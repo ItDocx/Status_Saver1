@@ -36,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        mainBinding.icFacebookDld.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(MainActivity.this,FacebookActivity.class));
+
+            }
+        });
         checkPermissions();
     }
 

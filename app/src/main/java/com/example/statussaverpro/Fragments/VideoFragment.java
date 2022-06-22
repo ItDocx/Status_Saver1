@@ -15,29 +15,31 @@ import com.example.statussaverpro.Adapters.WhatsappAdapter;
 import com.example.statussaverpro.Models.WhatsappStatusModel;
 import com.example.statussaverpro.R;
 import com.example.statussaverpro.databinding.FragmentImageBinding;
+import com.example.statussaverpro.databinding.FragmentVideoBinding;
 
 import java.io.File;
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class VideoFragment extends Fragment {
-    private FragmentImageBinding binding;
-    private ArrayList<WhatsappStatusModel> Whatsapplistimg;
+    private FragmentVideoBinding binding;
+    private ArrayList<WhatsappStatusModel> WhatsapplistVid;
     private WhatsappAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_image,container,false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_video,container,false);
 
-        Whatsapplistimg = new ArrayList<>();
+        WhatsapplistVid = new ArrayList<>();
         getData();
-        binding.refreshView.setOnRefreshListener(()->{
+        binding.refreshVideoView.setOnRefreshListener(()->{
 
-            Whatsapplistimg = new ArrayList<>();
+            WhatsapplistVid = new ArrayList<>();
             getData();
-            binding.refreshView.setRefreshing(false);
+            binding.refreshVideoView.setRefreshing(false);
         });
 
         return binding.getRoot();
@@ -70,10 +72,10 @@ public class VideoFragment extends Fragment {
                 model = new WhatsappStatusModel("whats"+i,
                         Uri.fromFile(file),allfiles[i].getAbsolutePath(),file.getName());
 
-                Whatsapplistimg.add(model);
+                WhatsapplistVid.add(model);
             }
         }
-        Arrays.sort(allfilesBuiseness, ((o11,o22)->{
+     /*   Arrays.sort(allfilesBuiseness, ((o11, o22)->{
 
             if (o11.lastModified()> o22.lastModified()) return -1;
             else if (o11.lastModified()< o22.lastModified()) return +1;
@@ -88,11 +90,11 @@ public class VideoFragment extends Fragment {
                 model = new WhatsappStatusModel("whatsBuiseness"+i,
                         Uri.fromFile(file),allfilesBuiseness[i].getAbsolutePath(),file.getName());
 
-                Whatsapplistimg.add(model);
+                WhatsapplistVid.add(model);
             }
-        }
-        adapter= new WhatsappAdapter(Whatsapplistimg,getActivity());
-        binding.whatsappImageRecycler.setAdapter(adapter);
+        }*/
+        adapter= new WhatsappAdapter(WhatsapplistVid,getActivity());
+        binding.whatsappVideoRecycler.setAdapter(adapter);
 
     }
     }

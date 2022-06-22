@@ -49,7 +49,7 @@ public class ImageFragment extends Fragment {
 
         WhatsappStatusModel model;
 
-        String targetPath = Environment.getExternalStorageDirectory().getAbsolutePath()+"/WhatsApp/Media/.statuses";
+        String targetPath = Environment.getExternalStorageDirectory().getAbsolutePath()+"/WhatsApp/Media/.Statuses";
         File TargetDirectory = new File(targetPath);
         File[] allfiles = TargetDirectory.listFiles();
 
@@ -59,9 +59,15 @@ public class ImageFragment extends Fragment {
 
         Arrays.sort(allfiles, ((o1,o2)->{
 
-            if (o1.lastModified()> o2.lastModified()) return -1;
-            else if (o1.lastModified()< o2.lastModified()) return +1;
-            else return 0;
+            if (o1.lastModified()> o2.lastModified()) {
+                return -1;
+            }
+            else if (o1.lastModified()< o2.lastModified()) {
+                return +1;
+            }
+            else{
+                return 0;
+            }
         }));
 
         for (int i=0; i<allfiles.length; i++){
@@ -70,13 +76,13 @@ public class ImageFragment extends Fragment {
             if (Uri.fromFile(file).toString().endsWith(".png")||Uri.
                     fromFile(file).toString().endsWith(".jpg")){
 
-                model = new WhatsappStatusModel("whats"+i,
+                model = new WhatsappStatusModel("whatsapp"+i,
                         Uri.fromFile(file),allfiles[i].getAbsolutePath(),file.getName());
 
                 Whatsapplistimg.add(model);
             }
         }
-        Arrays.sort(allfilesBuiseness, ((o11,o22)->{
+     /*   Arrays.sort(allfilesBuiseness, ((o11,o22)->{
 
             if (o11.lastModified()> o22.lastModified()) return -1;
             else if (o11.lastModified()< o22.lastModified()) return +1;
@@ -94,7 +100,7 @@ public class ImageFragment extends Fragment {
 
                 Whatsapplistimg.add(model);
             }
-        }
+        }*/
         adapter= new WhatsappAdapter(Whatsapplistimg,getActivity());
         binding.whatsappImageRecycler.setAdapter(adapter);
 
